@@ -1,0 +1,1030 @@
+fileFormatVersion: 2
+guid: 29d8bd10f3412ac4f8d439c5f975825c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5710978338969961944
+    second: Cacique_Outside_B_0
+  - first:
+      213: -5197642644494020826
+    second: Cacique_Outside_B_1
+  - first:
+      213: 8909825421968474656
+    second: Cacique_Outside_B_2
+  - first:
+      213: -3203317723489498600
+    second: Cacique_Outside_B_3
+  - first:
+      213: 5321743666159156849
+    second: Cacique_Outside_B_4
+  - first:
+      213: -2610108759770188965
+    second: Cacique_Outside_B_5
+  - first:
+      213: -6248868495052594720
+    second: Cacique_Outside_B_6
+  - first:
+      213: -3173548965078574801
+    second: Cacique_Outside_B_7
+  - first:
+      213: 4938174975329191303
+    second: Cacique_Outside_B_8
+  - first:
+      213: 4436120568168231863
+    second: Cacique_Outside_B_9
+  - first:
+      213: 9056269285892248594
+    second: Cacique_Outside_B_10
+  - first:
+      213: -8982989476864968105
+    second: Cacique_Outside_B_11
+  - first:
+      213: -4781989313949419670
+    second: Cacique_Outside_B_12
+  - first:
+      213: -7323028483123979284
+    second: Cacique_Outside_B_13
+  - first:
+      213: 5142855565824743078
+    second: Cacique_Outside_B_14
+  - first:
+      213: 8303562157241130252
+    second: Cacique_Outside_B_15
+  - first:
+      213: 2686247313850283535
+    second: Cacique_Outside_B_16
+  - first:
+      213: 2847933121528326190
+    second: Cacique_Outside_B_17
+  - first:
+      213: -3316489446265072529
+    second: Cacique_Outside_B_18
+  - first:
+      213: -9029542491869304193
+    second: Cacique_Outside_B_19
+  - first:
+      213: -2840057358273015029
+    second: Cacique_Outside_B_20
+  - first:
+      213: -5086721933904214762
+    second: Cacique_Outside_B_21
+  - first:
+      213: 2009664863704872519
+    second: Cacique_Outside_B_22
+  - first:
+      213: 4556819932664833827
+    second: Cacique_Outside_B_23
+  - first:
+      213: 8183241586923251771
+    second: Cacique_Outside_B_24
+  - first:
+      213: -5305595588100279469
+    second: Cacique_Outside_B_25
+  - first:
+      213: 7219749770178611964
+    second: Cacique_Outside_B_26
+  - first:
+      213: 8992696895300153467
+    second: Cacique_Outside_B_27
+  - first:
+      213: 8333933729233864876
+    second: Cacique_Outside_B_28
+  - first:
+      213: -8970756379614403005
+    second: Cacique_Outside_B_29
+  - first:
+      213: -5554299081840812765
+    second: Cacique_Outside_B_30
+  - first:
+      213: 4822481467628638748
+    second: Cacique_Outside_B_31
+  - first:
+      213: 6219601254022751030
+    second: Cacique_Outside_B_32
+  - first:
+      213: 8358601191348086073
+    second: Cacique_Outside_B_33
+  - first:
+      213: 5365374080329345209
+    second: Cacique_Outside_B_34
+  - first:
+      213: -1649601130033391435
+    second: Cacique_Outside_B_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cacique_Outside_B_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 662
+        width: 14
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5414e8a88714f40800000000000000
+      internalID: 5710978338969961944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 732
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f03899d834ed7b0800000000000000
+      internalID: -5197642644494020826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 730
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0220d27d30f06ab70800000000000000
+      internalID: 8909825421968474656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_3
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 736
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a02bc90878b83d0800000000000000
+      internalID: -3203317723489498600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 671
+        width: 42
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ef9172ba1aad940800000000000000
+      internalID: 5321743666159156849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_5
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 675
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5333c479e707cbd0800000000000000
+      internalID: -2610108759770188965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_6
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 719
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1a240363f8749a0800000000000000
+      internalID: -6248868495052594720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_7
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 673
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29de2bc70a45f3d0800000000000000
+      internalID: -3173548965078574801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 417
+        width: 413
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785483bf9fbe78440800000000000000
+      internalID: 4938174975329191303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 671
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3b8763724409d30800000000000000
+      internalID: 4436120568168231863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_10
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 671
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21453efeee45ead70800000000000000
+      internalID: 9056269285892248594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_11
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 479
+        width: 165
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a346a2aa2065380800000000000000
+      internalID: -8982989476864968105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_12
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 671
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67b4561e06f2adb0800000000000000
+      internalID: -4781989313949419670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_13
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 479
+        width: 77
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebd357c4606f5a90800000000000000
+      internalID: -7323028483123979284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 141
+        width: 337
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6df1c93e71f5740800000000000000
+      internalID: 5142855565824743078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 317
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ddbb0b9cd2c3370800000000000000
+      internalID: 8303562157241130252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_16
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 337
+        width: 242
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06b4e813b7774520800000000000000
+      internalID: 2686247313850283535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_17
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 287
+        width: 117
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28e3c4c514e58720800000000000000
+      internalID: 2847933121528326190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_18
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 239
+        width: 214
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64d90e8b6679f1d0800000000000000
+      internalID: -3316489446265072529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 46
+        width: 46
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7aa5d7b1fe90b280800000000000000
+      internalID: -9029542491869304193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 47
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03176241e61698d0800000000000000
+      internalID: -2840057358273015029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_21
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 47
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615837a0a555869b0800000000000000
+      internalID: -5086721933904214762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_22
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 95
+        width: 117
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74676bebb83c3eb10800000000000000
+      internalID: 2009664863704872519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_23
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 96
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32728efe5931d3f30800000000000000
+      internalID: 4556819932664833827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 55
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38a3cbddd6b09170800000000000000
+      internalID: 8183241586923251771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_25
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 61
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35337614cecbe56b0800000000000000
+      internalID: -5305595588100279469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_26
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 66
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa44b20a24b13460800000000000000
+      internalID: 7219749770178611964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_27
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 51
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70bf115e2a7ccc70800000000000000
+      internalID: 8992696895300153467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_28
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 60
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca881a8529418a370800000000000000
+      internalID: 8333933729233864876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_29
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 50
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346a3821a98718380800000000000000
+      internalID: -8970756379614403005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_30
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 5
+        width: 83
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d999ab96a2be2b0800000000000000
+      internalID: -5554299081840812765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_31
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 5
+        width: 84
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12d8ed1855ece240800000000000000
+      internalID: 4822481467628638748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_32
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 15
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633a99e3366705650800000000000000
+      internalID: 6219601254022751030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_33
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 20
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935a57d6f77bff370800000000000000
+      internalID: 8358601191348086073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_34
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 5
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b86e119c43a57a40800000000000000
+      internalID: 5365374080329345209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacique_Outside_B_35
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 14
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8d64f13807b19e0800000000000000
+      internalID: -1649601130033391435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
