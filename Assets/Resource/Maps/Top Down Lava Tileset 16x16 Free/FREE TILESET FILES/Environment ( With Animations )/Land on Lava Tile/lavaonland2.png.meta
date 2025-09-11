@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7ddf6ee8c606d0345951cebf7ed805dc
+guid: 6fa5d2bdf2598a348b8be69a4763052b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6122488203018710560
-    second: lavaonland1_0
+      213: -189873082944174101
+    second: lavaonland2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lavaonland1_0
+      name: lavaonland2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02e2372159277f450800000000000000
-      internalID: 6122488203018710560
+      spriteID: be744b2ef6f6d5df0800000000000000
+      internalID: -189873082944174101
       vertices: []
       indices: 
       edges: []
