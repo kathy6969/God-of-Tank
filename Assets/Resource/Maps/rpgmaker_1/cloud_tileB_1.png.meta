@@ -1022,7 +1022,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cloud_tileB_1_0: 8696060554791895239
+      cloud_tileB_1_1: -6518360997083725995
+      cloud_tileB_1_10: -2009910315147085036
+      cloud_tileB_1_11: 4256439984506278412
+      cloud_tileB_1_12: 5296078679304960239
+      cloud_tileB_1_13: 6477225798617070862
+      cloud_tileB_1_14: -4450602847983161646
+      cloud_tileB_1_15: 5526187726924804026
+      cloud_tileB_1_16: 7617150603900123885
+      cloud_tileB_1_17: -6610712987315217308
+      cloud_tileB_1_18: 985285663841892872
+      cloud_tileB_1_19: -6883477074103511537
+      cloud_tileB_1_2: -51186170141974220
+      cloud_tileB_1_20: -4629107759555212537
+      cloud_tileB_1_21: 8445333453298239759
+      cloud_tileB_1_22: -1645695804770577167
+      cloud_tileB_1_23: 5331807991640403456
+      cloud_tileB_1_24: 2436108137008913483
+      cloud_tileB_1_25: 1527359629988550751
+      cloud_tileB_1_26: 8016630088350267043
+      cloud_tileB_1_27: 6147329111213972434
+      cloud_tileB_1_28: -6918362714102550876
+      cloud_tileB_1_29: -3126750786637321914
+      cloud_tileB_1_3: 3105120008248854740
+      cloud_tileB_1_30: 595861310112138383
+      cloud_tileB_1_31: 2289361233531868019
+      cloud_tileB_1_32: 5133910918874216458
+      cloud_tileB_1_33: -4890879050222594326
+      cloud_tileB_1_34: -5626048891875680986
+      cloud_tileB_1_35: -7140174989931418799
+      cloud_tileB_1_4: 7934303225902971453
+      cloud_tileB_1_5: -7642710481069305402
+      cloud_tileB_1_6: 2468731602101929315
+      cloud_tileB_1_7: -8921928762127549894
+      cloud_tileB_1_8: -1489589397730229585
+      cloud_tileB_1_9: 5440142312181927764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

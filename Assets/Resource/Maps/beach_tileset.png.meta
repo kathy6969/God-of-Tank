@@ -947,7 +947,40 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      beach_tileset_0: 2390654581710173712
+      beach_tileset_1: 1302000718529895404
+      beach_tileset_10: 2709845560717616505
+      beach_tileset_11: -2990469573373937568
+      beach_tileset_12: -876583711167932279
+      beach_tileset_13: -5125184894408486426
+      beach_tileset_14: -6785629104336979280
+      beach_tileset_15: -5411274292943241707
+      beach_tileset_16: -3223727578718907123
+      beach_tileset_17: 9179834177426456932
+      beach_tileset_18: -3660278809423712336
+      beach_tileset_19: 5994314400004555833
+      beach_tileset_2: 564749503989927479
+      beach_tileset_20: -1170667646442592689
+      beach_tileset_21: -5039157933986220715
+      beach_tileset_22: -3731444991764089439
+      beach_tileset_23: -5259957739775324045
+      beach_tileset_24: 3421528410271269848
+      beach_tileset_25: -322851175481759616
+      beach_tileset_26: -4574076059749849019
+      beach_tileset_27: -8265580587888874546
+      beach_tileset_28: 3224876423878074693
+      beach_tileset_29: 1556974147417242195
+      beach_tileset_3: 3587331103506707302
+      beach_tileset_30: 3813441868536918506
+      beach_tileset_31: 4273657814297007828
+      beach_tileset_32: -9098223361815209394
+      beach_tileset_4: 7653711464011248930
+      beach_tileset_5: -7933100305454659720
+      beach_tileset_6: -6380697876175472039
+      beach_tileset_7: -5084577343996683202
+      beach_tileset_8: 3561662316447749368
+      beach_tileset_9: -3472307769146412850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

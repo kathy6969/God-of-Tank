@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Glacier_Man_Tileset_0: 8104376626634114585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
