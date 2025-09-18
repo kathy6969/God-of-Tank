@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 6338280524875305389}
   - component: {fileID: 7288388087663879628}
   - component: {fileID: 4697724891775352596}
-  - component: {fileID: 817867682934323313}
+  - component: {fileID: 5720739545983595229}
   m_Layer: 7
-  m_Name: RoundBullet
+  m_Name: ExplosiveBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8163746430616585293}
@@ -235,7 +235,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.00090144575}
   m_Radius: 0.21333334
---- !u!114 &817867682934323313
+--- !u!114 &5720739545983595229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,8 +244,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6782725853014927700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31bf9fea837e1794791b855e7b40eca8, type: 3}
+  m_Script: {fileID: 11500000, guid: 05b0ed8f4afea7d4f96944576ed732c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 5
-  maxBounce: 5
+  bombType: 0
+  delay: 2
+  childPrefab: {fileID: 6782725853014927700, guid: 02b3dfb153e4658428dffb3ee9f7d38c, type: 3}
+  explosionPrefab: {fileID: 6001037912653588159, guid: f3fd9018c0ce0634da642acfa38233c5, type: 3}
+  childSpeed: 6
+  childLifeTime: 2
+  spawnRadius: 0.1
