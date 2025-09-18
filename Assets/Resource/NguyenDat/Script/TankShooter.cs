@@ -52,6 +52,8 @@ public class TankShooter : MonoBehaviour
 
     void Start()
     {
+        // Lấy lựa chọn từ UI
+        shootMode = WeaponSelectUI.selectedMode;
         if (laserLine != null)
         {
             laserLine.enabled = false;
