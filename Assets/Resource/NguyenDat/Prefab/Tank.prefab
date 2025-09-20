@@ -137,10 +137,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa124e6ef634e2847b3c3b12260f4381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BulletType: {fileID: 1419465429778840844}
+  CooldownText: {fileID: 3638925298089667823}
   bulletPrefab: {fileID: 6782725853014927700, guid: 02b3dfb153e4658428dffb3ee9f7d38c, type: 3}
   firePoint: {fileID: 8654320580254426648}
-  bulletSpeed: 10
-  fireCooldown: 0.5
+  bulletSpeed: 15
+  singleCooldown: 0.25
+  coneCooldown: 0.35
+  lineCooldown: 0.3
+  bombExplodeAreaCooldown: 0.75
+  bombSplit4Cooldown: 1
+  bombLargeSplit6Cooldown: 1.3
+  laserCooldown: 0.66
   shootMode: 0
   coneBulletCount: 3
   coneAngle: 30
@@ -150,7 +158,7 @@ MonoBehaviour:
   bombPrefab: {fileID: 6782725853014927700, guid: d9e20e2db8e5204459bad2febf1a0310, type: 3}
   splitChildPrefab: {fileID: 6782725853014927700, guid: 02b3dfb153e4658428dffb3ee9f7d38c, type: 3}
   explosionPrefab: {fileID: 6001037912653588159, guid: f3fd9018c0ce0634da642acfa38233c5, type: 3}
-  bombInitialSpeed: 7
+  bombInitialSpeed: 10
   bombExplodeDelay: 2
   bombSplit4ChildLife: 2
   largeBombDelay: 3
@@ -255,8 +263,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -293,7 +301,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -90.47894, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -649,7 +657,7 @@ GameObject:
   - component: {fileID: 1378533441565624997}
   - component: {fileID: 3638925298089667823}
   m_Layer: 5
-  m_Name: Magazine
+  m_Name: Cooldown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -671,7 +679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -342, y: 128}
+  m_AnchoredPosition: {x: -342, y: 86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1378533441565624997

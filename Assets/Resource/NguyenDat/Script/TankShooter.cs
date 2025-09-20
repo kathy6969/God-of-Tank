@@ -1,5 +1,7 @@
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 public class TankShooter : MonoBehaviour
 {
     public enum ShootMode
@@ -13,11 +15,23 @@ public class TankShooter : MonoBehaviour
         Laser                   // Bắn tia laser
     }
 
+    public TMP_Text BulletType;
+    public TMP_Text CooldownText; // Thêm TMP_Text để hiển thị thời gian hồi chiêu
+
     [Header("Bắn đạn")]
     public GameObject bulletPrefab;         // Prefab của đạn thường
     public Transform firePoint;             // Vị trí bắn
     public float bulletSpeed = 10f;         // Tốc độ đạn
-    public float fireCooldown = 0.5f;       // Thời gian hồi bắn
+
+    [Header("Thời gian hồi chiêu cho từng loại đạn")]
+    public float singleCooldown = 0.5f;
+    public float coneCooldown = 0.8f;
+    public float lineCooldown = 1.0f;
+    public float bombExplodeAreaCooldown = 1.5f;
+    public float bombSplit4Cooldown = 2.0f;
+    public float bombLargeSplit6Cooldown = 2.5f;
+    public float laserCooldown = 1.2f;
+
     public ShootMode shootMode = ShootMode.Single; // Chế độ bắn
 
     [Header("Cài đặt bắn hình nón")]
@@ -44,7 +58,7 @@ public class TankShooter : MonoBehaviour
     public float laserLength = 10f;         // Độ dài tia laser
     public float laserDuration = 0.1f;      // Thời gian tồn tại của laser (0.1s)
     public LayerMask hitMask;               // Layer để raycast (Player có layer là Tank)
-    public LayerMask wallMask;               // Layer để raycast (Tường có layer là Wall)
+    public LayerMask wallMask;              // Layer để raycast (Tường có layer là Wall)
     private bool laserActive = false;       // Trạng thái laser đang hoạt động
     private float laserTimer = 0f;          // Bộ đếm thời gian cho laser
 
@@ -54,19 +68,37 @@ public class TankShooter : MonoBehaviour
     {
         // Lấy lựa chọn từ UI
         shootMode = WeaponSelectUI.selectedMode;
+        if (BulletType != null)
+        {
+            BulletType.text = "Bullet Type: " + shootMode.ToString();
+        }
         if (laserLine != null)
         {
             laserLine.enabled = false;
+        }
+        if (CooldownText != null)
+        {
+            CooldownText.text = "";
         }
     }
     void Update()
     {
         fireTimer -= Time.deltaTime;
 
+        // Hiển thị thời gian hồi chiêu còn lại
+        if (CooldownText != null)
+        {
+            float cooldown = GetCurrentCooldown();
+            if (fireTimer > 0f)
+                CooldownText.text = $"Cooldown: {fireTimer:F2}s";
+            else
+                CooldownText.text = "Ready!";
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && fireTimer <= 0f)
         {
             Shoot();
-            fireTimer = fireCooldown;
+            fireTimer = GetCurrentCooldown();
         }
 
         // Nếu laser đang hoạt động thì cập nhật vị trí mỗi frame
@@ -104,7 +136,26 @@ public class TankShooter : MonoBehaviour
                 DisableLaser();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("TestChoseBullet"); 
+        }
 
+    }
+
+    float GetCurrentCooldown()
+    {
+        switch (shootMode)
+        {
+            case ShootMode.Single: return singleCooldown;
+            case ShootMode.Cone: return coneCooldown;
+            case ShootMode.Line: return lineCooldown;
+            case ShootMode.Bomb_ExplodeArea: return bombExplodeAreaCooldown;
+            case ShootMode.Bomb_Split4: return bombSplit4Cooldown;
+            case ShootMode.Bomb_LargeSplit6: return bombLargeSplit6Cooldown;
+            case ShootMode.Laser: return laserCooldown;
+            default: return 0.5f;
+        }
     }
 
     void Shoot()
