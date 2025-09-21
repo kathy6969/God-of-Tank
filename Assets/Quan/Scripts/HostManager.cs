@@ -1,60 +1,123 @@
-﻿//using Mirror;
-//using TMPro;
-//using Unity.Netcode;
-//using UnityEngine;
-//using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using Mirror;
+using System.Net;
+using System.Net.Sockets;
 
-//public class HostManager : MonoBehaviour
-//{
-//    [Header("UI")]
-//    public TMP_InputField playerNameInput;
-//    public TextMeshProUGUI currentPlayersText;
-//    public TextMeshProUGUI roomIDText;
-//    public TMP_Text statusText;
-//    public GameObject startGameButton;
+public class HostingManager : MonoBehaviour
+{
+    [Header("Canvas UI")]
+    public GameObject canvasMain;
+    public GameObject canvasHost;
+    public GameObject canvasJoin;
 
-//    private string roomID;
-//    private int maxPlayers = 5;
+    [Header("Host UI")]
+    public TMP_Text hostIPText;
+    public Button copyButton;
+    public Button createButton;
+    public Button enterLobbyButton;
+    public Button closeHostButton;
 
-//    void Start()
-//    {
-//        roomID = Random.Range(1000, 9999).ToString();
-//        roomIDText.text = roomID;
-//        currentPlayersText.text = "1 / " + maxPlayers;
-//        startGameButton.SetActive(false);
-//    }
+    [Header("Join UI")]
+    public TMP_InputField joinIPInput;
+    public Button joinLobbyButton;
+    public Button closeJoinButton;
 
-//    public void CopyRoomID()
-//    {
-//        GUIUtility.systemCopyBuffer = roomIDText.text;
-//        statusText.text = "Đã copy ID phòng!";
-//    }
+    private void Start()
+    {
+        // Ban đầu chỉ mở canvas main
+        ShowMain();
 
-//    public void CreateRoom()
-//    {
-//        if (string.IsNullOrEmpty(playerNameInput.text))
-//        {
-//            statusText.text = "Vui lòng nhập tên!";
-//            return;
-//        }
+        // --- Gán sự kiện Host ---
+        createButton.onClick.AddListener(OnCreateRoom);
+        copyButton.onClick.AddListener(OnCopyIP);
+        enterLobbyButton.onClick.AddListener(OnEnterLobby);
+        closeHostButton.onClick.AddListener(CloseHost);
 
-//        // Start Host
-//        NetworkManager.Singleton.StartHost();
-//        statusText.text = "Đang chờ người chơi...";
-//    }
+        // --- Gán sự kiện Join ---
+        joinLobbyButton.onClick.AddListener(OnJoinLobby);
+        closeJoinButton.onClick.AddListener(CloseJoin);
+    }
 
-//    // Gọi khi có client join
-//    public void UpdatePlayerCount(int count)
-//    {
-//        currentPlayersText.text = $"{count} / {maxPlayers}";
+    // ----------------- UI Switch -----------------
+    public void ShowMain()
+    {
+        canvasMain.SetActive(true);
+        canvasHost.SetActive(false);
+        canvasJoin.SetActive(false);
+    }
 
-//        if (count > 1)
-//            startGameButton.SetActive(true); // Enable start game nếu có người khác
-//    }
+    public void ShowHost()
+    {
+        canvasMain.SetActive(false);
+        canvasHost.SetActive(true);
+        canvasJoin.SetActive(false);
 
-//    public void StartGame()
-//    {
-//        // Host load scene gameplay
-//        NetworkManager.Singleton.SceneManager.LoadScene("GameScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
-//    }
-//}
+        // Ẩn thông tin ban đầu
+        hostIPText.gameObject.SetActive(false);
+        copyButton.gameObject.SetActive(false);
+        enterLobbyButton.gameObject.SetActive(false);
+    }
+
+    public void ShowJoin()
+    {
+        canvasMain.SetActive(false);
+        canvasHost.SetActive(false);
+        canvasJoin.SetActive(true);
+    }
+
+    public void CloseHost() => ShowMain();
+    public void CloseJoin() => ShowMain();
+
+    // ----------------- Host -----------------
+    void OnCreateRoom()
+    {
+        NetworkManager.singleton.StartHost();
+
+        string localIP = GetLocalIPAddress();
+        hostIPText.text = "Room IP: " + localIP;
+
+        hostIPText.gameObject.SetActive(true);
+        copyButton.gameObject.SetActive(true);
+        enterLobbyButton.gameObject.SetActive(true);
+    }
+
+    void OnCopyIP()
+    {
+        GUIUtility.systemCopyBuffer = hostIPText.text.Replace("Room IP: ", "");
+        Debug.Log("Copied IP: " + GUIUtility.systemCopyBuffer);
+    }
+
+    void OnEnterLobby()
+    {
+        // Chỗ này bạn load scene lobby
+        // SceneManager.LoadScene("Lobby");
+        Debug.Log("Enter Lobby (Host)");
+    }
+
+    // ----------------- Join -----------------
+    void OnJoinLobby()
+    {
+        string ip = joinIPInput.text.Trim();
+        if (!string.IsNullOrEmpty(ip))
+        {
+            NetworkManager.singleton.networkAddress = ip;
+            NetworkManager.singleton.StartClient();
+            Debug.Log("Join lobby with IP: " + ip);
+        }
+    }
+
+    // ----------------- Utility -----------------
+    string GetLocalIPAddress()
+    {
+        string localIP = "";
+        using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+        {
+            socket.Connect("8.8.8.8", 65530); // Kết nối giả tới Google DNS
+            IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+            localIP = endPoint.Address.ToString();
+        }
+        return localIP;
+    }
+}
