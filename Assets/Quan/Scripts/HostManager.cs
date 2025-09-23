@@ -4,6 +4,7 @@ using TMPro;
 using Mirror;
 using System.Net;
 using System.Net.Sockets;
+using UnityEngine.SceneManagement;
 
 public class HostingManager : MonoBehaviour
 {
@@ -26,16 +27,15 @@ public class HostingManager : MonoBehaviour
 
     private void Start()
     {
-        // Ban đầu chỉ mở canvas main
         ShowMain();
 
-        // --- Gán sự kiện Host ---
+        // Host buttons
         createButton.onClick.AddListener(OnCreateRoom);
         copyButton.onClick.AddListener(OnCopyIP);
         enterLobbyButton.onClick.AddListener(OnEnterLobby);
         closeHostButton.onClick.AddListener(CloseHost);
 
-        // --- Gán sự kiện Join ---
+        // Join buttons
         joinLobbyButton.onClick.AddListener(OnJoinLobby);
         closeJoinButton.onClick.AddListener(CloseJoin);
     }
@@ -54,7 +54,6 @@ public class HostingManager : MonoBehaviour
         canvasHost.SetActive(true);
         canvasJoin.SetActive(false);
 
-        // Ẩn thông tin ban đầu
         hostIPText.gameObject.SetActive(false);
         copyButton.gameObject.SetActive(false);
         enterLobbyButton.gameObject.SetActive(false);
@@ -91,9 +90,10 @@ public class HostingManager : MonoBehaviour
 
     void OnEnterLobby()
     {
-        // Chỗ này bạn load scene lobby
-        // SceneManager.LoadScene("Lobby");
-        Debug.Log("Enter Lobby (Host)");
+        if (NetworkServer.active) // chỉ host load scene lobby
+        {
+            SceneManager.LoadScene("LobbyScene");
+        }
     }
 
     // ----------------- Join -----------------
@@ -105,6 +105,7 @@ public class HostingManager : MonoBehaviour
             NetworkManager.singleton.networkAddress = ip;
             NetworkManager.singleton.StartClient();
             Debug.Log("Join lobby with IP: " + ip);
+            SceneManager.LoadScene("LobbyScene"); // client cũng load lobby
         }
     }
 
@@ -114,7 +115,7 @@ public class HostingManager : MonoBehaviour
         string localIP = "";
         using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
         {
-            socket.Connect("8.8.8.8", 65530); // Kết nối giả tới Google DNS
+            socket.Connect("8.8.8.8", 65530); // fake connect tới Google DNS
             IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
             localIP = endPoint.Address.ToString();
         }
