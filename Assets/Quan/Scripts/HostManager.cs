@@ -96,7 +96,6 @@ public class HostingManager : MonoBehaviour
         }
     }
 
-
     // ----------------- Join -----------------
     void OnJoinLobby()
     {
@@ -106,7 +105,7 @@ public class HostingManager : MonoBehaviour
             NetworkManager.singleton.networkAddress = ip;
             NetworkManager.singleton.StartClient();
             Debug.Log("Join lobby with IP: " + ip);
-            SceneManager.LoadScene("LobbyScene"); // client cũng load lobby
+            // ❌ KHÔNG load scene bằng tay, Mirror sẽ tự đồng bộ khi host đổi scene
         }
     }
 

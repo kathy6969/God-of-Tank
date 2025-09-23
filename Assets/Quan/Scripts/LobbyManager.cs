@@ -11,8 +11,8 @@ public class LobbyManager : NetworkBehaviour
     public Transform[] spawnPoints;
 
     [Header("UI Slots")]
-    public TMP_Text[] playerNameTexts; // 4 text cho tên
-    public TMP_Text[] statusTexts;     // 4 text cho trạng thái
+    public TMP_Text[] playerNameTexts;
+    public TMP_Text[] statusTexts;
 
     [Header("Buttons")]
     public Button buttonStart; // Host only
@@ -38,9 +38,19 @@ public class LobbyManager : NetworkBehaviour
             {
                 if (occupied[i])
                 {
-                    playerNameTexts[i].text = names[i];
-                    statusTexts[i].text = ready[i] ? "Ready" : "Not Ready";
-                    playerNameTexts[i].color = ready[i] ? Color.green : Color.white;
+                    // ✅ Nếu là host slot
+                    if (i == 0)
+                    {
+                        playerNameTexts[i].text = names[i] == "Host" ? "Host" : names[i];
+                        statusTexts[i].text = "Host";
+                        playerNameTexts[i].color = Color.yellow;
+                    }
+                    else
+                    {
+                        playerNameTexts[i].text = names[i];
+                        statusTexts[i].text = ready[i] ? "Ready" : "Not Ready";
+                        playerNameTexts[i].color = ready[i] ? Color.green : Color.white;
+                    }
                 }
                 else
                 {
@@ -83,7 +93,6 @@ public class LobbyManager : NetworkBehaviour
         }
 
         if (connected < 2) return;
-
         NetworkManager.singleton.ServerChangeScene("GameScene");
     }
 }

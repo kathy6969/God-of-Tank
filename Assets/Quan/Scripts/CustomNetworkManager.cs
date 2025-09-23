@@ -9,19 +9,18 @@ public class CustomNetworkManager : NetworkManager
     public GameObject lobbyPlayerPrefab; // Prefab cho Lobby (có NetworkIdentity + LobbyPlayer)
     public GameObject tankPrefab;        // Prefab cho GameScene (có NetworkIdentity + Tank controller)
 
-    // mapping connectionId -> slot
     private Dictionary<int, int> connToSlot = new Dictionary<int, int>();
     private bool[] slotUsed = new bool[4];
 
-    // tìm slot trống đầu tiên
     int GetFirstFreeSlot()
     {
         for (int i = 0; i < slotUsed.Length; i++)
+        {
             if (!slotUsed[i]) return i;
+        }
         return -1;
     }
 
-    // cập nhật UI cho tất cả client
     void UpdateClientsSlotUI()
     {
         if (LobbyManager.Instance == null) return;
@@ -30,6 +29,7 @@ public class CustomNetworkManager : NetworkManager
         bool[] occupied = new bool[slotUsed.Length];
         bool[] ready = new bool[slotUsed.Length];
 
+        // Reset toàn bộ slot
         for (int i = 0; i < slotUsed.Length; i++)
         {
             names[i] = "Empty";
@@ -37,6 +37,7 @@ public class CustomNetworkManager : NetworkManager
             ready[i] = false;
         }
 
+        // Gán thông tin player theo slot
         foreach (var kvp in connToSlot)
         {
             int connId = kvp.Key;
@@ -50,7 +51,7 @@ public class CustomNetworkManager : NetworkManager
                     var lp = conn.identity.GetComponent<LobbyPlayer>();
                     if (lp != null)
                     {
-                        names[slot] = string.IsNullOrEmpty(lp.playerName) ? $"Player {connId}" : lp.playerName;
+                        names[slot] = string.IsNullOrEmpty(lp.playerName) ? $"Player {slot + 1}" : lp.playerName;
                         ready[slot] = lp.isReady;
                     }
                 }
@@ -60,14 +61,24 @@ public class CustomNetworkManager : NetworkManager
         LobbyManager.Instance.RpcUpdateAllSlots(names, occupied, ready);
     }
 
-    // thêm player khi join
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         string sceneName = SceneManager.GetActiveScene().name;
 
         if (sceneName == "LobbyScene")
         {
-            int free = GetFirstFreeSlot();
+            int free;
+
+            // ✅ Host (connectionId = 0) luôn slot 0
+            if (conn.connectionId == 0)
+            {
+                free = 0;
+            }
+            else
+            {
+                free = GetFirstFreeSlot();
+            }
+
             if (free == -1)
             {
                 Debug.LogWarning("Lobby full!");
@@ -88,6 +99,17 @@ public class CustomNetworkManager : NetworkManager
             connToSlot[conn.connectionId] = free;
             slotUsed[free] = true;
 
+            // ✅ Đặt tên theo slot
+            var lp = playerObj.GetComponent<LobbyPlayer>();
+            if (lp != null)
+            {
+                if (free == 0)
+                    lp.playerName = "Player 1";
+                else
+                    lp.playerName = $"Player {free + 1}";
+            }
+
+            Debug.Log($"✅ Player {conn.connectionId} assigned to slot {free}");
             UpdateClientsSlotUI();
         }
         else if (sceneName == "GameScene")
@@ -122,7 +144,6 @@ public class CustomNetworkManager : NetworkManager
         UpdateClientsSlotUI();
     }
 
-    // public để LobbyPlayer gọi sau khi đổi trạng thái
     [Server]
     public void RefreshLobbyUI()
     {

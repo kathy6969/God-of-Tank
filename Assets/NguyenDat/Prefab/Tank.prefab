@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 453275556682783965}
   - component: {fileID: -2049880208884310489}
   - component: {fileID: -450105287098006595}
+  - component: {fileID: 8858709332463581580}
   m_Layer: 6
   m_Name: Tank
   m_TagString: Tank
@@ -224,6 +225,23 @@ MonoBehaviour:
   rotationSensitivity: 0.01
   positionPrecision: 0.01
   scalePrecision: 0.01
+--- !u!114 &8858709332463581580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110832216699735247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a619a6a26b6954487f89e571aa54ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  playerName: 
+  isReady: 0
 --- !u!1 &2543464558687876282
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8654320580254426648}
   - component: {fileID: 6086710813964873261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4453186025728528712}
   - component: {fileID: 7821460083156647321}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,13 +485,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3515821114708193039}
     m_Modifications:
+    - target: {fileID: 1710509521218031589, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887369704721907562, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2228882302929688316, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 2228882302929688316, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228882302929688316, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549812129045913730, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2609529651584232297, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787727006773713800, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900982243103857636, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975325075694698710, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8777175074747714725, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
       propertyPath: m_Pivot.x
@@ -554,6 +604,10 @@ PrefabInstance:
     - target: {fileID: 8777175074747714725, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021693829673612074, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
