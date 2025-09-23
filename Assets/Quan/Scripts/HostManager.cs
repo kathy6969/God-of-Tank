@@ -90,11 +90,12 @@ public class HostingManager : MonoBehaviour
 
     void OnEnterLobby()
     {
-        if (NetworkServer.active) // chỉ host load scene lobby
+        if (NetworkServer.active) // chỉ host được phép đổi scene
         {
-            SceneManager.LoadScene("LobbyScene");
+            NetworkManager.singleton.ServerChangeScene("LobbyScene");
         }
     }
+
 
     // ----------------- Join -----------------
     void OnJoinLobby()
