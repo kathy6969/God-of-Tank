@@ -2915,7 +2915,7 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 110832216699735247, guid: edda7db43a806b64bbdf977cd455bb2c, type: 3}
+  playerPrefab: {fileID: 7171669999426223571, guid: e369534519b6da94cab44209083635f8, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
-  lobbyPlayerPrefab: {fileID: 0}
+  lobbyPlayerPrefab: {fileID: 7171669999426223571, guid: e369534519b6da94cab44209083635f8, type: 3}
   tankPrefab: {fileID: 0}
 --- !u!4 &1824306030
 Transform:
