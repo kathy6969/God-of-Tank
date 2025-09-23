@@ -67,7 +67,8 @@ public class TankShooter : MonoBehaviour
     void Start()
     {
         // Lấy lựa chọn từ UI
-        shootMode = WeaponSelectUI.selectedMode;
+        //shootMode = WeaponSelectUI.selectedMode;
+        shootMode = (ShootMode)PlayerPrefs.GetInt("SelectedWeapon", 0);
         if (BulletType != null)
         {
             BulletType.text = "Bullet Type: " + shootMode.ToString();
