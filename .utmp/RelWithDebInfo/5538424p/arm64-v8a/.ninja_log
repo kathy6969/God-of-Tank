@@ -1,0 +1,12 @@
+# ninja log v5
+64	704	7804064971788725	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6652f1f7148bb27
+705	899	7804064973774713	D:/Unity Project/God-of-Tank/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5538424p/obj/arm64-v8a/libswappywrapper.so	c1217598d208ee39
+38	13422	7804065098914949	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e655b715913fc523
+23	13448	7804065099179176	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	4ebcf421d1ee7b92
+9	13464	7804065099398641	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	8b370245abfa7a03
+45	13465	7804065099403883	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ad6cf6666cb900ba
+0	13528	7804065099984020	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7bb91dcbd8a662e0
+30	13694	7804065101657018	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	e6015b70c773316d
+16	13776	7804065102479032	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f77c4376ef2b3da5
+55	13932	7804065104053760	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	5e7a9a4ad1062c5a
+13932	14028	7804065105055136	D:/Unity Project/God-of-Tank/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5538424p/obj/arm64-v8a/libgame.so	edd93609647e8fd5
