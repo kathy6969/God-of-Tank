@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using System.Collections;
 using UnityEngine.SceneManagement;
 public class TankShooter : MonoBehaviour
 {
@@ -15,13 +14,11 @@ public class TankShooter : MonoBehaviour
         Laser                   // Bắn tia laser
     }
 
-    public TMP_Text BulletType;
-    public TMP_Text CooldownText; // Thêm TMP_Text để hiển thị thời gian hồi chiêu
-
     [Header("Bắn đạn")]
     public GameObject bulletPrefab;         // Prefab của đạn thường
     public Transform firePoint;             // Vị trí bắn
     public float bulletSpeed = 10f;         // Tốc độ đạn
+    public bool doubleShoot = false;      // Bắn đôi
 
     [Header("Thời gian hồi chiêu cho từng loại đạn")]
     public float singleCooldown = 0.5f;
@@ -33,6 +30,7 @@ public class TankShooter : MonoBehaviour
     public float laserCooldown = 1.2f;
 
     public ShootMode shootMode = ShootMode.Single; // Chế độ bắn
+    public float cooldownModifier = 1f; // Hệ số mặc định (1 = bình thường)
 
     [Header("Cài đặt bắn hình nón")]
     public int coneBulletCount = 3;         // Số lượng đạn trong hình nón
@@ -62,44 +60,28 @@ public class TankShooter : MonoBehaviour
     private bool laserActive = false;       // Trạng thái laser đang hoạt động
     private float laserTimer = 0f;          // Bộ đếm thời gian cho laser
 
-    private float fireTimer = 0f;           // Bộ đếm thời gian hồi bắn
+    public float fireTimer = 0f;           // Bộ đếm thời gian hồi bắn
 
     void Start()
     {
         // Lấy lựa chọn từ UI
-        //shootMode = WeaponSelectUI.selectedMode;
         shootMode = (ShootMode)PlayerPrefs.GetInt("SelectedWeapon", 0);
-        if (BulletType != null)
-        {
-            BulletType.text = "Bullet Type: " + shootMode.ToString();
-        }
-        if (laserLine != null)
-        {
-            laserLine.enabled = false;
-        }
-        if (CooldownText != null)
-        {
-            CooldownText.text = "";
-        }
     }
     void Update()
     {
         fireTimer -= Time.deltaTime;
-
-        // Hiển thị thời gian hồi chiêu còn lại
-        if (CooldownText != null)
-        {
-            float cooldown = GetCurrentCooldown();
-            if (fireTimer > 0f)
-                CooldownText.text = $"Cooldown: {fireTimer:F2}s";
-            else
-                CooldownText.text = "Ready!";
-        }
-
+        if (fireTimer < 0f) fireTimer = 0f;
         if (Input.GetKeyDown(KeyCode.Space) && fireTimer <= 0f)
         {
-            Shoot();
-            fireTimer = GetCurrentCooldown();
+            if (doubleShoot == true)
+            {
+                StartCoroutine(DoubleShoot());
+            }
+            else
+            {
+                ShootOneTime();
+            }
+            fireTimer = GetCurrentCooldown() * cooldownModifier;
         }
 
         // Nếu laser đang hoạt động thì cập nhật vị trí mỗi frame
@@ -139,13 +121,14 @@ public class TankShooter : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("TestChoseBullet"); 
+            SceneManager.LoadScene("TestChoseBullet");
         }
 
     }
 
-    float GetCurrentCooldown()
+    public float GetCurrentCooldown()
     {
+        float baseCooldown;
         switch (shootMode)
         {
             case ShootMode.Single: return singleCooldown;
@@ -155,14 +138,24 @@ public class TankShooter : MonoBehaviour
             case ShootMode.Bomb_Split4: return bombSplit4Cooldown;
             case ShootMode.Bomb_LargeSplit6: return bombLargeSplit6Cooldown;
             case ShootMode.Laser: return laserCooldown;
-            default: return 0.5f;
+            default: baseCooldown = 0.5f; break;
         }
+        return baseCooldown;
     }
-
+    // Hàm để thiết lập hệ số cooldown tạm thời
+    public void SetCooldownModifier(float modifier, float duration)
+    {
+        StartCoroutine(ResetModifierAfterTime(modifier, duration));
+    }
+    private IEnumerator ResetModifierAfterTime(float modifier, float duration)
+    {
+        cooldownModifier = modifier;
+        yield return new WaitForSeconds(duration);
+        cooldownModifier = 1f; // trở lại bình thường
+    }
     void Shoot()
     {
         if (bulletPrefab == null || firePoint == null) return;
-
         switch (shootMode)
         {
             case ShootMode.Single:
@@ -186,7 +179,6 @@ public class TankShooter : MonoBehaviour
                 break;
 
             case ShootMode.Bomb_LargeSplit6:
-                // Bomb lớn: sinh ra tại vị trí bắn, thường đứng yên (speed = 0), delay 3s, sinh ra 6 viên con
                 SpawnBomb(BombBullet.BombType.LargeSplit6, largeBombDelay, 0f, -1f, explosionPrefab, splitChildPrefab);
                 break;
             case ShootMode.Laser:
@@ -195,6 +187,16 @@ public class TankShooter : MonoBehaviour
         }
     }
 
+    void ShootOneTime()
+    {
+        Shoot();
+    }
+    IEnumerator DoubleShoot()
+    {
+        Shoot();
+        yield return new WaitForSeconds(0.2f);
+        Shoot();
+    }
     void ShootCone()
     {
         float startAngle = -coneAngle / 2f;
@@ -232,8 +234,6 @@ public class TankShooter : MonoBehaviour
             Destroy(bullet, lifeTime);
     }
 
-    /// Sinh bomb sẽ tự xử lý hành vi trễ (nổ hoặc tách).
-    /// bombPrefab phải có component BombBullet.
     void SpawnBomb(BombBullet.BombType type, float delay, float initialSpeed, float childLifeTime, GameObject explosionFx, GameObject childPrefab)
     {
         if (bombPrefab == null)

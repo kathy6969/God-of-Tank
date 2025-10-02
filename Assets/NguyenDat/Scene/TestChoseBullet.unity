@@ -127,10 +127,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1084452016324394040, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.00024414
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084452016324394040, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187647214959623024, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187647214959623024, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7927003059933168978, guid: 406c9614d6a27784b8cb2622b9526f4d, type: 3}
+    - target: {fileID: 1451578326958944532, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: weapons.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451578326958944532, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: 'weapons.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a0e97c5ea192e654badc945d747b36f7, type: 2}
     - target: {fileID: 2228882302929688316, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7920053673372910550, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920053673372910550, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3906844038785929748, guid: 406c9614d6a27784b8cb2622b9526f4d, type: 3}
     - target: {fileID: 8777175074747714725, guid: 95ba3b9ec60c8e84a857778b8ebdeb84, type: 3}
       propertyPath: m_Pivot.x
       value: 0

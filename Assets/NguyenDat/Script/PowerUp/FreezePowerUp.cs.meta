@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 49b8cbb679293ce4d896d7215606e082
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - freezeEffect: {fileID: 723819052046133355, guid: 6f389ef18ef765b498d033b5ac3d0ae7, type: 3}
+  - spriteRenderer: {instanceID: 0}
+  - circleCollider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

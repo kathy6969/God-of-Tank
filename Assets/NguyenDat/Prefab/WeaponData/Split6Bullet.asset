@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Split6Bullet
   m_EditorClassIdentifier: 
   weaponName: "\u0110\u1EA1n ph\xE2n t\xE1ch V2"
-  weaponIcon: {fileID: 1189435133573721212, guid: 0b790612ffc7cf049ae9bf4cda2869d4, type: 3}
+  weaponIcon: {fileID: -8669607645610714811, guid: fe97f9d1ee1e4af42a6a1115b32f8b1f, type: 3}
   weaponPrefab: {fileID: 6782725853014927700, guid: d9e20e2db8e5204459bad2febf1a0310, type: 3}
   description: "B\u1EAFn m\u1ED9t vi\xEAn \u0111\u1EA1n l\u1EDBn , sau m\u1ED9t th\u1EDDi
     gian n\u1ED5 th\xE0nh s\xE1u vi\xEAn \u0111\u1EA1n nh\u1ECF h\u01A1n."

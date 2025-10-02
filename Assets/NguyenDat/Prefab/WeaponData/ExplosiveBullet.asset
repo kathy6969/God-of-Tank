@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExplosiveBullet
   m_EditorClassIdentifier: 
   weaponName: "\u0110\u1EA1n n\u1ED5"
-  weaponIcon: {fileID: 1189435133573721212, guid: 0b790612ffc7cf049ae9bf4cda2869d4, type: 3}
+  weaponIcon: {fileID: -5380469614535492370, guid: fe97f9d1ee1e4af42a6a1115b32f8b1f, type: 3}
   weaponPrefab: {fileID: 6782725853014927700, guid: d9e20e2db8e5204459bad2febf1a0310, type: 3}
   description: "B\u1EAFn m\u1ED9t vi\xEAn \u0111\u1EA1n l\u1EDBn s\u1EBD ph\xE1t
     n\u1ED5 sau m\u1ED9t th\u1EDDi gian ng\u1EAFn g\xE2y s\xE1t th\u01B0\u01A1ng

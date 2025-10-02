@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SingelBullet
   m_EditorClassIdentifier: 
   weaponName: "\u0110\u1EA1n \u0111\u01A1n"
-  weaponIcon: {fileID: 1189435133573721212, guid: 0b790612ffc7cf049ae9bf4cda2869d4, type: 3}
+  weaponIcon: {fileID: -8152928154803757849, guid: fe97f9d1ee1e4af42a6a1115b32f8b1f, type: 3}
   weaponPrefab: {fileID: 6782725853014927700, guid: 02b3dfb153e4658428dffb3ee9f7d38c, type: 3}
   description: "B\u1EAFn m\u1ED9t vi\xEAn \u0111\u1EA1n tr\xF2n nh\u1ECF c\xF3 kh\u1EA3
     n\u0103ng n\u1EA3y t\u01B0\u1EDDng."

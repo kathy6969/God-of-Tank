@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LineBullet
   m_EditorClassIdentifier: 
   weaponName: "\u0110\u1EA1n d\xF2ng"
-  weaponIcon: {fileID: 1189435133573721212, guid: 0b790612ffc7cf049ae9bf4cda2869d4, type: 3}
+  weaponIcon: {fileID: 8419285067912151039, guid: fe97f9d1ee1e4af42a6a1115b32f8b1f, type: 3}
   weaponPrefab: {fileID: 6782725853014927700, guid: 02b3dfb153e4658428dffb3ee9f7d38c, type: 3}
   description: "B\u1EAFn ba vi\xEAn \u0111\u1EA1n nh\u1ECF theo \u0111\u01B0\u1EDDng
     th\u1EB3ng c\xF3 kh\u1EA3 n\u0103ng n\u1EA3y t\u01B0\u1EDDng."
