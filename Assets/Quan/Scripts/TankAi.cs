@@ -4,27 +4,22 @@ public class TankAI : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 3f;
-    public float rotationSpeed = 180f;
-    public float detectionRadius = 10f;
-    public float dodgeRadius = 5f;
-    public float dodgeForce = 5f;
-    public LayerMask projectileLayer;
+    public LayerMask wallLayer;
 
     private Rigidbody2D rb;
-    private Vector2 moveDirection;
 
     [Header("Fire Settings")]
-    public Transform gunBarrel; // ✅ đầu nòng súng
+    public Transform gunBarrel;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
     public float minRandomFireTime = 2f;
     public float maxRandomFireTime = 5f;
     public float minFireTime = 0.8f;
 
-    [Header("Player Detection")]
+    [Header("Detection")]
     public Transform player;
+    public float detectionRadius = 6f;
     public LayerMask playerLayer;
-    public float aimSmooth = 5f;
 
     [Header("AI Level (1–3)")]
     [Range(1, 3)] public int intelligenceLevel = 1;
@@ -39,39 +34,28 @@ public class TankAI : MonoBehaviour
 
     void Update()
     {
-        MoveRandomly();
-        RotateTowardsTarget();
-        DodgeIncomingProjectiles();
+        DetectPlayer();
+        MoveForward();
         HandleFiring();
     }
 
-    void MoveRandomly()
+    void MoveForward()
     {
-        if (Random.value < 0.01f)
-            moveDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-
-        rb.MovePosition(rb.position + moveDirection * moveSpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + (Vector2)(gunBarrel.up * moveSpeed * Time.deltaTime));
     }
 
-    void RotateTowardsTarget()
+    void DetectPlayer()
     {
-        if (player == null) return;
+        Collider2D playerInRange = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
 
-        Vector2 direction = (player.position - transform.position).normalized;
-        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-        float angle = Mathf.LerpAngle(rb.rotation, targetAngle, Time.deltaTime * aimSmooth);
-        rb.MoveRotation(angle);
-    }
-
-    void DodgeIncomingProjectiles()
-    {
-        if (intelligenceLevel < 2) return;
-
-        Collider2D[] projectiles = Physics2D.OverlapCircleAll(transform.position, dodgeRadius, projectileLayer);
-        foreach (Collider2D proj in projectiles)
+        if (playerInRange != null)
         {
-            Vector2 dodgeDir = (Vector2)(transform.position - proj.transform.position).normalized;
-            rb.AddForce(dodgeDir * dodgeForce, ForceMode2D.Impulse);
+            // Có player -> xoay nòng về hướng player
+            Vector2 direction = (player.position - gunBarrel.position).normalized;
+            float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+            float smooth = intelligenceLevel >= 2 ? 5f : 2f;
+            float angle = Mathf.LerpAngle(rb.rotation, targetAngle, Time.deltaTime * smooth);
+            rb.MoveRotation(angle);
         }
     }
 
@@ -93,7 +77,7 @@ public class TankAI : MonoBehaviour
 
         if (bulletRb != null)
         {
-            bulletRb.linearVelocity = gunBarrel.up * bulletSpeed; // hướng bắn của nòng
+            bulletRb.linearVelocity = gunBarrel.up * bulletSpeed;
             bullet.transform.up = bulletRb.linearVelocity.normalized;
         }
     }
@@ -106,12 +90,20 @@ public class TankAI : MonoBehaviour
             nextFireTime = Time.time + Random.Range(minRandomFireTime, maxRandomFireTime);
     }
 
+    // 🔥 Khi va chạm với tường -> đổi hướng 0 / 90 / 180 / 270
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        {
+            float[] angles = { 0f, 90f, 180f, 270f };
+            float randomAngle = angles[Random.Range(0, angles.Length)];
+            transform.rotation = Quaternion.Euler(0, 0, randomAngle);
+        }
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, dodgeRadius);
     }
 }

@@ -49,13 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  rotationSpeed: 360
-  detectionRadius: 6
-  dodgeRadius: 4
-  dodgeForce: 4
-  projectileLayer:
+  wallLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   gunBarrel: {fileID: 8072784163793648344}
   bulletPrefab: {fileID: 6782725853014927700, guid: 02b3dfb153e4658428dffb3ee9f7d38c, type: 3}
   bulletSpeed: 10
@@ -63,10 +59,10 @@ MonoBehaviour:
   maxRandomFireTime: 10
   minFireTime: 5
   player: {fileID: 3515821114708193039, guid: 04ac37606f3a5b34ebabe3ed90c0bf12, type: 3}
+  detectionRadius: 6
   playerLayer:
     serializedVersion: 2
     m_Bits: 72
-  aimSmooth: 5
   intelligenceLevel: 1
 --- !u!212 &2750477680049035253
 SpriteRenderer:
