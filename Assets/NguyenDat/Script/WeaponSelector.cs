@@ -50,6 +50,6 @@ public class WeaponSelector : MonoBehaviour
         PlayerPrefs.Save();
         Debug.Log("Weapon Selected: " + weapons[currentIndex].weaponName);
         // Load sang scene gameplay ở đây nếu muốn
-        SceneManager.LoadScene("testTank"); // Thay "GameScene" bằng tên scene gameplay của bạn
+        SceneManager.LoadScene("Map1PC"); // Thay "GameScene" bằng tên scene gameplay của bạn
     }
 }
