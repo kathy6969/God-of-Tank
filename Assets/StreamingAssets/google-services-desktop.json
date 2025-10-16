@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472188042477",
+    "project_id": "god-of-tank-80d0b",
+    "storage_bucket": "god-of-tank-80d0b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472188042477:android:3ffa6ae546c28e16c4e0e4",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.GodofTank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTavDi6okBCkrFQiA6_Y0Ywb2tXL0OY10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8c6ffdd3af0623e41bef10f44eae9342
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - shieldPrefab: {fileID: 4550233705803111001, guid: 19c485731de6ce941b98fa613cdf0113, type: 3}
+  - spriteRenderer: {instanceID: 0}
+  - circleCollider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
